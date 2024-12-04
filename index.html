@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Balancer Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Harmonic Balancer Demonstration</h1>
+        <div class="control-panel">
+            <button id="startDemo">Start Demo</button>
+            <div class="parameters">
+                <label>Base Frequency: <input type="number" id="baseFreq" value="60" min="1" max="400"></label>
+                <label>Harmonic Level: <input type="range" id="harmonicLevel" min="0" max="100" value="30"></label>
+            </div>
+        </div>
+        <div class="visualization">
+            <div id="signalPlot"></div>
+            <div id="spectrumPlot"></div>
+        </div>
+        <div class="metrics">
+            <div class="metric-box">
+                <h3>THD Before</h3>
+                <span id="thdBefore">0%</span>
+            </div>
+            <div class="metric-box">
+                <h3>THD After</h3>
+                <span id="thdAfter">0%</span>
+            </div>
+            <div class="metric-box">
+                <h3>Improvement</h3>
+                <span id="improvement">0%</span>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+</body>
+</html>

@@ -133,10 +133,10 @@ cython_debug/
 snippitlib.md
 ethics.md
 docsnippitlib.md
-AMI.code-worckspace
+*.code-worckspace
 desktop.ini
 implimentation_list.md
 AMI.md
-AMI.code-workspace
-.gitHub/
+
+# Working Documents
 themathupgrade.txt
