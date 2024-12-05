@@ -11,19 +11,22 @@ on:
 jobs:
   test:
     runs-on: self-hosted
-    env:
-      RUNNER_TOOL_CACHE: /home/dixon/actions-runner/_work/_tool
-      AGENT_TOOLSDIRECTORY: /home/dixon/actions-runner/_work/_tool
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
         
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
+
+    - name: Set Environment Variables 
+      run: | 
+        export PATH="/home/dixon/actions-runner/_work/_tool:$PATH" 
+        export RUNNER_TOOL_CACHE="/home/dixon/actions-runner/_work/_tool" 
+        export AGENT_TOOLSDIRECTORY="/home/dixon/actions-runner/_work/_tool"
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
         architecture: 'x64'
