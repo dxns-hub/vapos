@@ -21,4 +21,12 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    python_requires=">=3.6",
+    install_requires=[
+        # List of dependencies
+        "numpy>=1.26.4",
+        "scipy>=1.13.1",
+        "matplotlib>=3.9.3",
+        "qiskit>=1.3.0",
+    ],
 )
