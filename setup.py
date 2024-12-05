@@ -19,7 +19,7 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         # List of dependencies
-        "numpy>=1.26.4",
+        "numpy>=1.24.0,<1.25.0",
         "scipy>=1.13.1",
         "matplotlib>=3.7.0,<3.8.0",
         "qiskit>=1.3.0",
