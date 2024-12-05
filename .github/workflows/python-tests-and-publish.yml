@@ -11,6 +11,9 @@ on:
 jobs:
   test:
     runs-on: self-hosted
+    env:
+      RUNNER_TOOL_CACHE: /mnt/c/Users/dxn00/OneDrive/Apps/actions-runner/_work/_tool
+      AGENT_TOOLSDIRECTORY: /mnt/c/Users/dxn00/OneDrive/Apps/actions-runner/_work/_tool
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
