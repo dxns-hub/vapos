@@ -31,11 +31,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
         architecture: 'x64'
 
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential gcc gfortran pkg-config cmake libopenblas-dev liblapack-dev
-
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
