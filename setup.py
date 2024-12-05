@@ -15,7 +15,7 @@ setup(
     description='Vibrational and Power Optimizing Software',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/yourusername/vapos',
+    url='https://github.com/dxns-hub/vapos',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
