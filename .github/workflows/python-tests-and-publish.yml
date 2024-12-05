@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted  # This line specifies to use your self-hosted runner
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
@@ -23,10 +23,14 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential gcc gfortran
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install --only-binary=numpy,scipy -r requirements.txt
 
     - name: Install test dependencies
       run: |
