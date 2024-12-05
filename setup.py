@@ -5,11 +5,6 @@ setup(
     version='0.1.0',  # update this for each new release
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
-    install_requires=[
-        'numpy',
-        'scipy',
-        'matplotlib',
-    ],
     author='Mathew Dixon',
     author_email='dxn000@gmail.com',
     description='Vibrational and Power Optimizing Software',
@@ -26,7 +21,7 @@ setup(
         # List of dependencies
         "numpy>=1.26.4",
         "scipy>=1.13.1",
-        "matplotlib>=3.9.3",
+        "matplotlib>=3.7.0,<3.8.0",
         "qiskit>=1.3.0",
     ],
 )
